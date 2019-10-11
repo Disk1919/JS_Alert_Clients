@@ -70,10 +70,17 @@ export class alertClient {
     const script = document.createElement('script');
     script.setAttribute('src', this.momentJsUrl);
   }
-  // notify clients
+  // set event that starts after date - nowTime
+  setTimer(dateTime) {
+    const timeDifference = moment(dateTime) - moment();
+    setTimeout(() => {
+      this.notify('message');
+    }, timeDifference);
+  }
+  // send data to clients
   notify(eventName) {
     this.io.broadcast.on('connect', (socket)=> {
-      socket.emit(event_name, this.data);
+      socket.emit(eventName, this.data);
     });
   }
 }
