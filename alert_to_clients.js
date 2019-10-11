@@ -8,7 +8,7 @@
     }
 }]*/
 
-//socket.io license
+// socket.io license
 // (The MIT License)
 
 // Copyright (c) 2014-2018 Automattic <dev@cloudup.com>
@@ -32,7 +32,7 @@
 // TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-//moment.js license
+// moment.js license
 // Copyright (c) JS Foundation and other contributors
 
 // Permission is hereby granted, free of charge, to any person
