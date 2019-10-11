@@ -1,23 +1,25 @@
-
-export class Alert_client
-{
-    constructor(io,data,date)
-    {
-        this.data=data;
-        this.io=io;
-        this.date=date;
+/* eslint "require-jsdoc": ["error", {
+    "require": {
+        "FunctionDeclaration": false,
+        "MethodDefinition": false,
+        "ClassDeclaration": false,
+        "ArrowFunctionExpression": false,
+        "FunctionExpression": false
     }
+}]*/
 
-    //data
-    
 
-    // notify clients
-    notify(event_name)
-    {
-        this.io.broadcast.on("connect",(socket)=>
-        {
-           socket.emit(event_name,this.data);
-        })
-    }
+export class alertClient {
+  constructor(io, data, date) {
+    this.data=data;
+    this.io=io;
+    this.date=date;
+  }
+  // notify clients
+  notify(eventName) {
+    this.io.broadcast.on('connect', (socket)=> {
+      socket.emit(event_name, this.data);
+    });
+  }
 }
 
